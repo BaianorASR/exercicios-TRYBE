@@ -1,0 +1,20 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-msedge",
+      "request": "launch",
+      "name": "Open index.html",
+      "file": "/home/baianor/Trybe/trybe-exercicios/fundamentos/bloco-05-javascript-dom-eventos-web-storage/5.4-javascript-web-storage/exercicio/index.html"
+    },
+    {
+      "name": "Launch Microsoft Edge and open the Edge DevTools",
+      "request": "launch",
+      "type": "vscode-edge-devtools.debug",
+      "url": "" // Provide your project's url to finish configuring
+    }
+  ]
+}
