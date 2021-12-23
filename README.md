@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-019-c-project-playground-functions/pull/6)_
+- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-019-c-project-playground-functions/tree/adson-reis-playground-functions)_
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
@@ -41,11 +41,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-019-c-project-meme-generator/pull/19)_
-- [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-019-c-project-pixels-art/pull/9)_
-- [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-019-c-project-todo-list/pull/87)_
-- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-019-c-project-color-guess/pull/18)_
-- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-019-c-project-mistery-letter/pull/15)_
+- [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-019-c-project-meme-generator/tree/adson-reis-project-meme-generator)_
+- [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-019-c-project-pixels-art/tree/adson-reis-project-pixels-art)_
+- [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-019-c-project-todo-list/tree/adson-reis-project-todo-list)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-019-c-project-color-guess/tree/adson-reis-project-color-guess)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-019-c-project-mistery-letter/tree/adson-reis-project-mistery-letter)_
 
 ##### Bloco 6: HTML & CSS avançado
 
