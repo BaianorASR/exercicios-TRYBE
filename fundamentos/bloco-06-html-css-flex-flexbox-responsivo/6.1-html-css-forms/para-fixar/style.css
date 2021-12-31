@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(41, 41, 150);
+  font-family: Jetbrains Mono;
+}
+
+form {
+  display: grid;
+  padding: 10px;
+  margin: auto;
+  background: white;
+  gap: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: withe;
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid blue;
+  height: 30px;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  font-family: monospace;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid darkblue;
+}
+
+button {
+  margin: auto;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  background-color: rgb(41, 41, 150);
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+#lembrar {
+  vertical-align: middle;
+}
