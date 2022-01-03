@@ -8,10 +8,11 @@ function salvaInputs() {
     newObj.maxLength = key.maxLength;
     newObj.value = key.value;
     newObj.type = key.type;
+    newObj.name = key.name;
 
     const nome = key.name;
     inputs[nome] = newObj;
-  }  
+  }
 }
 
 function states() {
@@ -59,25 +60,50 @@ function states() {
 // https://stackoverflow.com/questions/15491894/regex-to-validate-date-formats-dd-mm-yyyy-dd-mm-yyyy-dd-mm-yyyy-dd-mmm-yyyy
 // esse regex ja faz todas as validaçoes de datas em diversos formatos
 function validaData() {
-  const regex = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/gm
-    
-    if(!regex.test(inputs.data.value)){
-      window.alert('Data invalida')
-    } else {
-      console.log('data correta camarada');
+  const regex =
+    /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/gm;
+
+  if (!regex.test(inputs.data.value)) {
+    console.log('Data invalida');
+    return false
+  }
+  return true
+}
+
+function checkLength(key) {
+  if (key.value.length === 0) {
+    console.log(`Por Favor preencha o campo ${key.name}`);
+    return false
+  } else if (key.value.length > key.maxLength) {
+    console.log(`o tamanho de ${key.name} esta muito grande`);
+    return false
+  } else {
+    return true
+  }
+}
+
+function checkRequired() {
+  for (key in inputs) {
+    if (inputs[key].type === 'text') {
+      checkLength(inputs[key]);
     }
+  }
 }
 
 function validaDados(event) {
-  event.preventDefault()
-  salvaInputs()
-  validaData()
+  event.preventDefault();
+  validaData();
+  checkRequired();
 
+  if (
+    validaData === true &&
+    checkRequired === true
+  ){}
 }
 
 window.onload = () => {
   states();
   const btn_enviar = document.querySelector('#submit');
+  btn_enviar.addEventListener('click', salvaInputs);
   btn_enviar.addEventListener('click', validaDados);
 };
-
