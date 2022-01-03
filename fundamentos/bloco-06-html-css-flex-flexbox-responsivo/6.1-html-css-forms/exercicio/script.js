@@ -85,17 +85,55 @@ function checkLength(key) {
 function checkRequired() {
   let lengthOK = false;
   for (key in inputs) {
-      lengthOK = checkLength(inputs[key]);
+    lengthOK = checkLength(inputs[key]);
   }
   return lengthOK;
+}
+
+function checkRadio() {
+  const radios = document.querySelectorAll('input[type=radio]');
+  let isChecked = false;
+  for (key of radios) {
+    if (key.checked) {
+      console.log('RADIO MARCADA');
+      isChecked = true;
+      break;
+    }
+  }
+  return isChecked;
+}
+
+function checkTextArea() {
+  const area = document.querySelector('#textarea');
+  if (area.value.length > area.maxLength || area.value.length === 0) {
+    console.log('TEXTEAREA');
+    return false;
+  }
+  return true;
+}
+
+function checkEstado() {
+  const optEstado = document.querySelectorAll('option');
+  let isSelected = false;
+  for (key of optEstado) {
+    if (key.selected) {
+      console.log('ESTADO MARCADO' + ' ' + key.value);
+      isSelected = true;
+      break;
+    }
+  }
+  return isSelected;
 }
 
 function validaDados(event) {
   event.preventDefault();
   salvaInputs();
-  checkRequired();
-  validaData();
 
+  const requiredLentgh = checkRequired();
+  const date = validaData();
+  const radio = checkRadio();
+  const textarea = checkTextArea();
+  const uhf = checkEstado();
   if (validaData === true && checkRequired === true) {
     console.log('Baianor joestar');
   }
