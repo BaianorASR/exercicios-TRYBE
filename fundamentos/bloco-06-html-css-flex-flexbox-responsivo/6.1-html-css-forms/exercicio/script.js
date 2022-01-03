@@ -1,4 +1,4 @@
-window.onload = () => {
+function states() {
   const select = document.getElementById('estado');
   const estados = [
     'AC',
@@ -38,13 +38,12 @@ window.onload = () => {
     }
     select.appendChild(options);
   }
-};
-const date = document.querySelector('#data_inicio');
+}
 
-const btn = document.querySelector('#submit');
-btn.addEventListener('click', () => {
-  e.preventDefault();
-});
+window.onload = () => {
+  states()
+};
+
 
 const conteiner = document.createElement('section');
 document.querySelector('body').appendChild(conteiner);
