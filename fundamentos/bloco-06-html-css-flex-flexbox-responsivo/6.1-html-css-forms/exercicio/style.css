@@ -1,0 +1,12 @@
+body {
+  font-family: Liga SFMono Nerd Font;
+  font-weight: 300;
+}
+
+fieldset {
+  border: 2px solid lightgrey;
+}
+
+button {
+  margin-top: 20px;
+}
