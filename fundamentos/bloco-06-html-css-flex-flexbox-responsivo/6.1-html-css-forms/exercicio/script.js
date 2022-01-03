@@ -1,7 +1,7 @@
 const inputs = {};
 
 function salvaInputs() {
-  const todosInputs = document.querySelectorAll('input');
+  const todosInputs = document.querySelectorAll('input[type=text]');
   for (key of todosInputs) {
     const newObj = {};
     newObj.required = key.required;
@@ -65,45 +65,46 @@ function validaData() {
 
   if (!regex.test(inputs.data.value)) {
     console.log('Data invalida');
-    return false
+    return false;
   }
-  return true
+  return true;
 }
 
 function checkLength(key) {
   if (key.value.length === 0) {
     console.log(`Por Favor preencha o campo ${key.name}`);
-    return false
+    return false;
   } else if (key.value.length > key.maxLength) {
     console.log(`o tamanho de ${key.name} esta muito grande`);
-    return false
+    return false;
   } else {
-    return true
+    return true;
   }
 }
 
 function checkRequired() {
+  let lengthOK = false;
   for (key in inputs) {
-    if (inputs[key].type === 'text') {
-      checkLength(inputs[key]);
-    }
+      lengthOK = checkLength(inputs[key]);
   }
+  return lengthOK;
 }
 
 function validaDados(event) {
   event.preventDefault();
-  validaData();
+  salvaInputs();
   checkRequired();
+  validaData();
 
-  if (
-    validaData === true &&
-    checkRequired === true
-  ){}
+  if (validaData === true && checkRequired === true) {
+    console.log('Baianor joestar');
+  }
 }
 
 window.onload = () => {
   states();
   const btn_enviar = document.querySelector('#submit');
-  btn_enviar.addEventListener('click', salvaInputs);
   btn_enviar.addEventListener('click', validaDados);
+
+  const limpar = document.querySelector('#limpar');
 };
