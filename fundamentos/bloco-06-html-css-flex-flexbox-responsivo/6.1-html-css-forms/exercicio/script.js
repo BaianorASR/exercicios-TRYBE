@@ -15,3 +15,7 @@ const btn = document.querySelector('#submit');
 btn.addEventListener('click', () => {
   e.preventDefault();
 });
+
+const conteiner = document.createElement('section');
+document.querySelector('body').appendChild(conteiner);
+
