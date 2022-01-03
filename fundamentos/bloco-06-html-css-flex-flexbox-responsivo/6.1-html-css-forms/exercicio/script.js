@@ -8,3 +8,10 @@ window.onload = () => {
     select.appendChild(options);
   }
 };
+const date = document.querySelector('#data_inicio')
+
+
+const btn = document.querySelector('#submit');
+btn.addEventListener('click', () => {
+  e.preventDefault();
+});
