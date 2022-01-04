@@ -50,7 +50,7 @@ function states() {
     const options = document.createElement('option');
     options.innerText = key;
     options.value = key;
-    options.className = 'dropdown-item'
+    options.className = 'dropdown-item';
     if (key === 'BA') {
       options.setAttribute('selected', '');
     }
@@ -58,11 +58,25 @@ function states() {
   }
 }
 
-
-
 window.onload = () => {
   states();
-  document.querySelector('#data-inicio').DatePickerX.init();
+  document.querySelector('#data-inicio').DatePickerX.init({
+    format: 'dd/M/yyyy',
+    shortMonthLabels: [
+      'Jan',
+      'Fev',
+      'Mar',
+      'Abr',
+      'Mai',
+      'Jun',
+      'Jul',
+      'Ago',
+      'Set',
+      'Out',
+      'Nov',
+      'Dez',
+    ],
+  });
   const btn_enviar = document.querySelector('#submit');
   const limpar = document.querySelector('#limpar');
 };
