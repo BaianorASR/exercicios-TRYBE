@@ -50,6 +50,7 @@ function states() {
     const options = document.createElement('option');
     options.innerText = key;
     options.value = key;
+    options.className = 'dropdown-item'
     if (key === 'BA') {
       options.setAttribute('selected', '');
     }

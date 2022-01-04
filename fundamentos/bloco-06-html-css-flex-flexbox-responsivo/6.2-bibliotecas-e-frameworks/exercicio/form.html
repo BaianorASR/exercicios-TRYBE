@@ -11,82 +11,121 @@
     //
   </head>
   <body>
-    <form action="">
+    <form action="" class="">
       <fieldset>
         <legend>Dados Pessoais</legend>
-        <div class="mb-3">
-          <label class="form-label" for="nome">Nome: </label>
-          <input type="text" id="nome" name="name" maxlength="40" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="email">Email: </label>
-          <input type="text" id="email" name="email" maxlength="50" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="cpf">CPF: </label>
-          <input type="text" id="cpf" name="cpf" maxlength="11" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="endereco">Endereço: </label>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="nome">Nome</label>
           <input
+            class="form-control"
             type="text"
-            id="endereco"
-            name="endereco"
-            maxlength="28"
+            id="nome"
+            name="name"
+            maxlength="40"
             required
           />
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="estado">Estado: </label>
-          <select id="estado" name="estado"></select>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="email">Email</label>
+          <input
+            class="form-control"
+            type="text"
+            id="email"
+            name="email"
+            maxlength="50"
+            required
+          />
         </div>
-        <div class="mb-3">
-          <label class="form-check-inline" for="moradia">Tipo de imovel:</label>
-          <div class='form-check form-check-inline'>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="cpf">CPF</label>
+          <input
+            class="form-control"
+            type="text"
+            id="cpf"
+            name="cpf"
+            maxlength="11"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <div class="input-group mb-3 col">
+            <label class="input-group-text" for="endereco">Endereço</label>
             <input
-              class="form-check-input"
-              type="radio"
-              name="imovel"
-              id="casa"
+              class="form-control"
+              type="text"
+              id="endereco"
+              name="endereco"
+              maxlength="28"
               required
             />
-            <label class="form-check-label" for="casa">Casa</label>
           </div>
-          <div class='form-check form-check-inline' >
-            <input
-              class="form-check-input"
-              type="radio"
-              name="imovel"
-              id="apt"
-              required
-            />
-            <label class="form-check-label" for="apt">Apartamento</label>
+          <div class="input-group mb-3 col">
+            <label class="input-group-text" for="estado">Estado</label>
+            <select class="form-select" id="estado" name="estado"></select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-text" for="moradia">Tipo de imovel</span>
+          <div class="form-control">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="imovel"
+                id="casa"
+                required
+              />
+              <label class="form-check-label" for="casa">Casa</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="imovel"
+                id="apt"
+                required
+              />
+              <label class="form-check-label" for="apt">Apartamento</label>
+            </div>
           </div>
         </div>
       </fieldset>
 
       <fieldset>
         <legend>Emprego</legend>
-        <div class="mb-3">
-          <label class="form-label" for="textarea"
-            >Sobre seu ultimo emprego:</label
+        <div class="input-group mb-3">
+          <span class="input-group-text" for="textarea"
+            >Sobre seu ultimo emprego:</span
           >
           <textarea
+            class="form-control"
             name="sobre"
             id="textarea"
             cols="30"
-            rows="10"
+            rows="3"
             maxlength="1000"
             required
           ></textarea>
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="cargo">Cargo: </label>
-          <input type="text" name="cargo" id="cargo" maxlength="40" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="data_inicio">Data de inicio: </label>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="cargo">Cargo</label>
           <input
+            class="form-control"
+            type="text"
+            name="cargo"
+            id="cargo"
+            maxlength="40"
+            required
+          />
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="data_inicio"
+            >Data de inicio</label
+          >
+          <input
+            class="form-control"
             type="text"
             name="data"
             id="data_inicio"
@@ -95,8 +134,12 @@
           />
         </div>
       </fieldset>
-      <button type="submit" id="submit">Enviar</button>
-      <button id="limpar">Limpar</button>
+      <div class="mb-3">
+        <button class="btn btn-success" type="submit" id="submit">
+          Enviar
+        </button>
+        <button class="btn btn-danger" id="limpar">Limpar</button>
+      </div>
     </form>
     <script src="script.js"></script>
   </body>
