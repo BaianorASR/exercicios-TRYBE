@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercicio/6.1</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div>
+          <label for="nome">Nome: </label>
+          <input type="text" id="nome" name="name" maxlength="40" required />
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input type="text" id="email" name="email" maxlength="50" required />
+        </div>
+        <div>
+          <label for="cpf">CPF: </label>
+          <input type="text" id="cpf" name="cpf" maxlength="11" required />
+        </div>
+        <div>
+          <label for="endereco">Endereço: </label>
+          <input
+            type="text"
+            id="endereco"
+            name="endereco"
+            maxlength="28"
+            required
+          />
+        </div>
+        <div>
+          <label for="estado">Estado: </label>
+          <select id="estado" name="estado"></select>
+        </div>
+        <div>
+          <label for="moradia">Tipo de imovel: </label>
+          <input type="radio" name="imovel" id="casa" required />Casa
+          <input type="radio" name="imovel" id="apartamento" required />Apartamento
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Emprego</legend>
+        <div>
+          <label for="textarea">Sobre seu ultimo emprego:</label>
+          <br />
+          <textarea
+            name="sobre"
+            id="textarea"
+            cols="30"
+            rows="10"
+            maxlength="1000"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label for="cargo">Cargo: </label>
+          <input type="text" name="cargo" id="cargo" maxlength="40" required />
+        </div>
+        <div>
+          <label for="data_inicio">Data de inicio: </label>
+          <input
+            type="text"
+            name="data"
+            id="data_inicio"
+            required
+            maxlength='10'
+          />
+          <br />
+        </div>
+      </fieldset>
+      <button type="submit" id="submit">Enviar</button>
+      <button id='limpar'>Limpar</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
