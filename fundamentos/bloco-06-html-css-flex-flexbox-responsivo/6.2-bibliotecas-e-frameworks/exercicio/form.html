@@ -11,18 +11,20 @@
     <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
     <script src="node_modules/just-validate/dist/just-validate.production.min.js"></script>
     <script src="node_modules/just-validate-plugin-date/dist/just-validate-plugin-date.production.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Exercicio/6.1</title>
   </head>
-  <body class="">
+  <body class="bg-light">
     <div class="container">
       <header>
-        <h1 class="display-1">Formulario</h1>
+        <h1 class="display-3 text-center p-2">Formulario</h1>
       </header>
     </div>
-
+    
     <div class="container">
       <form action="" id="form" autocomplete="off">
         <div class="container">
+          <p class="lead">Dados:</p>
           <label class="form-label" for="nome">Nome</label>
           <input class="form-control" type="text" id="name" name="name" autocomplete="off" />
         </div>
@@ -58,22 +60,22 @@
           </div>
         </div>
 
-        <div class="container my-3">
-          <span class="lead" for="moradia">Tipo de imovel:</span>
+        <div class="container my-2" id="radio-group">
+          <span class="" for="moradia">Imovel:</span>
 
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="imovel" id="casa" value="Casa" />
             <label class="form-check-label" for="casa">Casa</label>
           </div>
 
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="imovel" id="apt" value="Apartamento" />
             <label class="form-check-label" for="apt">Apartamento</label>
           </div>
         </div>
 
         <div class="container">
-          <p class="lead">Emprego</p>
+          <p class="lead">Emprego:</p>
 
           <div class="row">
             <div class="col-auto">
@@ -87,13 +89,13 @@
             </div>
           </div>
 
-          <div class="form-floating my-3">
+          <div class="form-floating mt-3">
             <textarea class="form-control" placeholder="descrição" name="sobre" id="textarea"></textarea>
             <label class="font-monospace text-secondary" for="textarea">Descreva um pouco seu ultimo emprego</label>
           </div>
         </div>
 
-        <div class="container p-4 text-center">
+        <div class="container p-2 text-center">
           <button class="btn btn-success text-uppercase" type="submit" id="submit">Enviar</button>
           <button class="btn btn-danger text-uppercase" id="limpar">Limpar</button>
         </div>
