@@ -68,12 +68,46 @@ function validations(e) {
         errorMessage: 'muito curto'
       },
     ])
+    .addField('#endereco', [
+      {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+      },
+      {
+        rule: 'maxLength',
+        value: 200,
+      }
+    ])
+    .addField('#cidade', [
+      {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+      },
+      {
+        rule: 'maxLength',
+        value: 28,
+      }
+    ])
+    .addField('#estado', [
+      {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+      },
+      {
+        rule: 'maxLength',
+        value: 200,
+      },
+    ])
+    .addRequiredGroup(
+      '#radio-group',
+      'Selecione uma das opções'
+    )
 
-  //  .onSuccess((ev)=>{
-  //     ev.preventDefault();
-  //     passou();
-  // }
-  // );
+   .onSuccess((ev)=>{
+      ev.preventDefault();
+      passou();
+  }
+  );
 }
 
 const btn_enviar = document.querySelector('#submit');
@@ -131,9 +165,9 @@ function states() {
     options.innerText = key;
     options.value = key;
     options.className = 'dropdown-item';
-    if (key === 'BA') {
-      options.setAttribute('selected', '');
-    }
+    // if (key === 'BA') {
+    //   options.setAttribute('selected', '');
+    // }
     select.appendChild(options);
   }
 }

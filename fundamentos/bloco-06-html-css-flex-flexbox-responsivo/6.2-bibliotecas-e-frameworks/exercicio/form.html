@@ -58,27 +58,40 @@
             />
           </div>
 
+          <div class=" col-md">
+            <label class="" for="endereco">Endereço</label>
+            <input
+            class="form-control"
+            type="text"
+            id="endereco"
+            name="endereco"
+            maxlength="200"
+            required
+            />
+          </div>
           <div class="row">
-            <div class=" col">
-              <label class="" for="endereco">Endereço</label>
+            <div class=" col-auto">
+              <label class="" for="endereco">Cidade</label>
               <input
                 class="form-control"
                 type="text"
-                id="endereco"
-                name="endereco"
+                id="cidade"
+                name="cidade"
                 maxlength="28"
                 required
               />
             </div>
-            <div class=" col">
+            <div class=" col-sm">
               <label class="" for="estado">Estado</label>
-              <select class="form-select" id="estado" name="estado"></select>
+              <select class="form-select" id="estado" name="estado">
+                <option value=""></option>
+              </select>
             </div>
           </div>
 
           <div class="">
             <span class="" for="moradia">Tipo de imovel:</span>
-            <div class="">
+            <div class="" id="radio-group">
               <div class="form-check-inline">
                 <input
                   class="form-check-input"
