@@ -2,6 +2,21 @@ import JustValidate from 'just-validate';
 
 const validate = new JustValidate('#form');
 
+validate.addField('#name', [
+  {
+    rule: 'minLength',
+    value: 10,
+  },
+  {
+    rule: 'maxLength',
+    value: 30,
+  },
+  {
+    rule: 'required',
+    errorMessage: 'ADSON REIS BOLADO',
+  },
+]);
+
 const inputs = {};
 
 function salvaInputs() {
@@ -82,5 +97,8 @@ window.onload = () => {
     ],
   });
   const btn_enviar = document.querySelector('#submit');
+  btn_enviar.addEventListener('click', (event) => {
+    event.preventDefault()
+  })
   const limpar = document.querySelector('#limpar');
 };
