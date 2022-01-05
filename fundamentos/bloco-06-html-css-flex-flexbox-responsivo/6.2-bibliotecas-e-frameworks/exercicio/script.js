@@ -1,22 +1,23 @@
+function passedValidation() {
+  console.log('PASSOU');
+  saveInputs();
+}
+
 const validation = new JustValidate('#form', {
   errorFieldCssClass: 'is-invalid',
-    errorFieldStyle: {
-      border: '1px solid #DC3545',
-    },
-    errorLabelCssClass: 'is-label-invalid',
-    errorLabelStyle: {
-      color: '#DC3545',
-      fontSize: '13px',
-      textDecoration: 'underlined',
-    },
-    
+  errorFieldStyle: {
+    border: '1px solid #DC3545',
+  },
+  errorLabelCssClass: 'is-label-invalid',
+  errorLabelStyle: {
+    color: '#DC3545',
+    fontSize: '13px',
+    textDecoration: 'underlined',
+  },
+
   focusInvalidField: true,
   lockForm: true,
 });
-
-function passou() {
-  console.log('PASSOU');
-}
 
 function validations(e) {
   validation
@@ -24,7 +25,7 @@ function validations(e) {
       {
         rule: 'minLength',
         value: 2,
-        errorMessage: 'Nome muito curto'
+        errorMessage: 'Nome muito curto',
       },
       {
         rule: 'maxLength',
@@ -42,12 +43,12 @@ function validations(e) {
       },
       {
         rule: 'email',
-        errorMessage:'Email invalido'
+        errorMessage: 'Email invalido',
       },
       {
         rule: 'maxLength',
-        value: 50
-      }
+        value: 50,
+      },
     ])
     .addField('#cpf', [
       {
@@ -56,16 +57,16 @@ function validations(e) {
       },
       {
         rule: 'number',
-        errorMessage: 'Preencha somente com números'
+        errorMessage: 'Preencha somente com números',
       },
       {
         rule: 'maxLength',
-        value: 11
+        value: 11,
       },
       {
         rule: 'minLength',
         value: 11,
-        errorMessage: 'muito curto'
+        errorMessage: 'muito curto',
       },
     ])
     .addField('#endereco', [
@@ -76,7 +77,7 @@ function validations(e) {
       {
         rule: 'maxLength',
         value: 200,
-      }
+      },
     ])
     .addField('#cidade', [
       {
@@ -86,7 +87,7 @@ function validations(e) {
       {
         rule: 'maxLength',
         value: 28,
-      }
+      },
     ])
     .addField('#estado', [
       {
@@ -98,10 +99,7 @@ function validations(e) {
         value: 200,
       },
     ])
-    .addRequiredGroup(
-      '#radio-group',
-      'Selecione uma das opções'
-    )
+    .addRequiredGroup('#radio-group', 'Selecione uma das opções')
     .addField('#textarea', [
       {
         validator: (value) => {
@@ -111,25 +109,25 @@ function validations(e) {
       },
       {
         validator: (value) => {
-          return value < 1001
+          return value < 1001;
         },
-        errorMessage: 'Descrição muito grande'
+        errorMessage: 'Descrição muito grande',
       },
     ])
-    .addField('#cargo',[
+    .addField('#cargo', [
       {
         rule: 'required',
-        errorMessage: 'Este campo é obrigatório'
+        errorMessage: 'Este campo é obrigatório',
       },
       {
         rule: 'maxLength',
-        value: 40
-      }
+        value: 40,
+      },
     ])
     .addField('#data-inicio', [
       {
         rule: 'required',
-        errorMessage: 'Este campo é obrigatório'
+        errorMessage: 'Este campo é obrigatório',
       },
       {
         plugin: JustValidatePluginDate(() => ({
@@ -138,29 +136,20 @@ function validations(e) {
         errorMessage: 'Formato da data errada',
       },
     ])
-   .onSuccess((ev)=>{
+    .onSuccess((ev) => {
       ev.preventDefault();
-      passou();
-  }
-  );
+      passedValidation();
+    });
 }
 
-const btn_enviar = document.querySelector('#submit');
-btn_enviar.addEventListener('click', validations);
-
 const inputs = {};
-function salvaInputs() {
-  const todosInputs = document.querySelectorAll('input[type=text]');
+function saveInputs() {
+  const todosInputs = document.querySelectorAll('input, textarea');
   for (key of todosInputs) {
     const newObj = {};
-    newObj.required = key.required;
-    newObj.maxLength = key.maxLength;
     newObj.value = key.value;
-    newObj.type = key.type;
-    newObj.name = key.name;
-
-    const nome = key.name;
-    inputs[nome] = newObj;
+    // newObj.name = key.name;
+    inputs[key.name] = newObj;
   }
 }
 
@@ -226,7 +215,10 @@ function pickday() {
     ],
   });
 }
+
 window.onload = () => {
   states();
   pickday();
+  const btn_enviar = document.querySelector('#submit');
+  btn_enviar.addEventListener('click', validations);
 };

@@ -17,125 +17,108 @@
     <title>Exercicio/6.1</title>
   </head>
   <body class="">
-    <header class="text-center">
-      <h1 class="fs-1 fw-bold text-dark">Formulario</h1>
+    <header>
+      <h1 class="display-1">Formulario</h1>
     </header>
-    <div class="container text-info">
+
+
       <form action="" id="form" autocomplete="off">
-        <fieldset>
-          <legend class="fw-bold">Dados Pessoais</legend>
-          <div class="">
+ 
+
             <label class="" for="nome">Nome</label>
             <input
-              class="form-control"
+              class=""
               type="text"
               id="name"
               name="name"
               autocomplete="off"
             />
-          </div>
-          <div class="">
-            <label class="" for="email">Email</label>
-            <input class="form-control" type="text" id="email" name="email" />
-          </div>
-          <div class="">
-            <label class="" for="cpf">CPF</label>
-            <input class="form-control" type="text" id="cpf" name="cpf" />
-          </div>
 
-          <div class="col-md">
+
+            <label class="" for="email">Email</label>
+            <input class="" type="text" id="email" 
+
+            <label class="" for="cpf">CPF</label>
+            <input class="" type="text" id="cpf" name="cpf" />
+
+
+
             <label class="" for="endereco">Endereço</label>
             <input
-              class="form-control"
+              class=""
               type="text"
               id="endereco"
               name="endereco"
             />
-          </div>
-          <div class="row">
-            <div class="col-auto">
-              <label class="" for="endereco">Cidade</label>
-              <input
-                class="form-control"
-                type="text"
-                id="cidade"
-                name="cidade"
-              />
-            </div>
-            <div class="col-sm">
-              <label class="" for="estado">Estado</label>
-              <select class="form-select" id="estado" name="estado">
+
+            <input
+            class=""
+            type="text"
+            id="cidade"
+            name="cidade"
+            />
+            <label class="" for="endereco">Cidade</label>
+
+              <select class="" id="estado" name="estado" label='oi'>
                 <option value=""></option>
               </select>
-            </div>
-          </div>
+              <label class="" for="estado">Estado</label>
 
-          <div class="">
+
             <span class="" for="moradia">Tipo de imovel:</span>
-            <div class="" id="radio-group">
-              <div class="form-check-inline">
                 <input
-                  class="form-check-input"
+                  class=""
                   type="radio"
                   name="imovel"
                   id="casa"
+                  value="Casa"
                 />
-                <label class="form-check-label" for="casa">Casa</label>
-              </div>
-              <div class="form-check-inline">
+                <label class="" for="casa">Casa</label>
+
+
                 <input
-                  class="form-check-input"
+                  class=""
                   type="radio"
                   name="imovel"
                   id="apt"
+                  value="Apartamento"
                 />
-                <label class="form-check-label" for="apt">Apartamento</label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
+                <label class="" for="apt">Apartamento</label>
 
-        <fieldset>
-          <legend class="fw-bold mt-3">Emprego</legend>
-          <div class="">
+
             <span class="" for="textarea">Sobre seu ultimo emprego:</span>
             <textarea
-              class="form-control"
+     
               name="sobre"
               id="textarea"
               cols="30"
               rows="3"
               style="resize: none"
             ></textarea>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label class="" for="cargo">Cargo</label>
-              <input class="form-control" type="text" name="cargo" id="cargo" />
-            </div>
-            <div class="col">
-              <label class="" for="data_inicio">Data de inicio</label>
-              <input
-                class="form-control"
-                type="text"
-                name="data"
-                id="data-inicio"
-              />
-            </div>
-          </div>
-        </fieldset>
-        <button
-          class="btn btn-success text-uppercase"
-          type="submit"
-          id="submit"
-        >
-          Enviar
-        </button>
-        <button class="btn btn-danger text-uppercase" id="limpar">
-          Limpar
-        </button>
+
+            <input class="" type="text" name="cargo" id="cargo" />
+            <label class="" for="cargo">Cargo</label>
+
+            <input
+            class=""
+            type="text"
+            name="data"
+            id="data-inicio"
+            />
+            <label class="" for="data_inicio">Data de inicio</label>
+
+            <button
+            class="btn btn-success text-uppercase"
+            type="submit"
+            id="submit"
+            >
+            Enviar
+          </button>
+
+          <button class="btn btn-danger text-uppercase" id="limpar">
+            Limpar
+          </button>
       </form>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
