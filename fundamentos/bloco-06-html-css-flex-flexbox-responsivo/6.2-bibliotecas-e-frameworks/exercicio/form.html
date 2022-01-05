@@ -30,58 +30,38 @@
               type="text"
               id="name"
               name="name"
-              maxlength="40"
               autocomplete="off"
-              required
             />
           </div>
           <div class="">
             <label class="" for="email">Email</label>
-            <input
-              class="form-control"
-              type="text"
-              id="email"
-              name="email"
-              maxlength="50"
-              required
-            />
+            <input class="form-control" type="text" id="email" name="email" />
           </div>
           <div class="">
             <label class="" for="cpf">CPF</label>
+            <input class="form-control" type="text" id="cpf" name="cpf" />
+          </div>
+
+          <div class="col-md">
+            <label class="" for="endereco">Endereço</label>
             <input
               class="form-control"
               type="text"
-              id="cpf"
-              name="cpf"
-              maxlength="11"
-              required
-            />
-          </div>
-
-          <div class=" col-md">
-            <label class="" for="endereco">Endereço</label>
-            <input
-            class="form-control"
-            type="text"
-            id="endereco"
-            name="endereco"
-            maxlength="200"
-            required
+              id="endereco"
+              name="endereco"
             />
           </div>
           <div class="row">
-            <div class=" col-auto">
+            <div class="col-auto">
               <label class="" for="endereco">Cidade</label>
               <input
                 class="form-control"
                 type="text"
                 id="cidade"
                 name="cidade"
-                maxlength="28"
-                required
               />
             </div>
-            <div class=" col-sm">
+            <div class="col-sm">
               <label class="" for="estado">Estado</label>
               <select class="form-select" id="estado" name="estado">
                 <option value=""></option>
@@ -98,7 +78,6 @@
                   type="radio"
                   name="imovel"
                   id="casa"
-                  required
                 />
                 <label class="form-check-label" for="casa">Casa</label>
               </div>
@@ -108,7 +87,6 @@
                   type="radio"
                   name="imovel"
                   id="apt"
-                  required
                 />
                 <label class="form-check-label" for="apt">Apartamento</label>
               </div>
@@ -119,59 +97,42 @@
         <fieldset>
           <legend class="fw-bold mt-3">Emprego</legend>
           <div class="">
-            <span class="" for="textarea"
-              >Sobre seu ultimo emprego:</span
-            >
+            <span class="" for="textarea">Sobre seu ultimo emprego:</span>
             <textarea
               class="form-control"
               name="sobre"
               id="textarea"
               cols="30"
               rows="3"
-              maxlength="1000"
-              required
               style="resize: none"
             ></textarea>
           </div>
           <div class="row">
-            <div class=" col">
+            <div class="col">
               <label class="" for="cargo">Cargo</label>
-              <input
-                class="form-control"
-                type="text"
-                name="cargo"
-                id="cargo"
-                maxlength="40"
-                required
-              />
+              <input class="form-control" type="text" name="cargo" id="cargo" />
             </div>
-            <div class=" col">
-              <label class="" for="data_inicio"
-                >Data de inicio</label
-              >
+            <div class="col">
+              <label class="" for="data_inicio">Data de inicio</label>
               <input
                 class="form-control"
                 type="text"
                 name="data"
                 id="data-inicio"
-                required
-                maxlength="10"
               />
             </div>
           </div>
         </fieldset>
-        <div class= d-inline">
-          <button
-            class="btn btn-success text-uppercase"
-            type="submit"
-            id="submit"
-          >
-            Enviar
-          </button>
-          <button class="btn btn-danger text-uppercase" id="limpar">
-            Limpar
-          </button>
-        </div>
+        <button
+          class="btn btn-success text-uppercase"
+          type="submit"
+          id="submit"
+        >
+          Enviar
+        </button>
+        <button class="btn btn-danger text-uppercase" id="limpar">
+          Limpar
+        </button>
       </form>
     </div>
     <script src="script.js"></script>

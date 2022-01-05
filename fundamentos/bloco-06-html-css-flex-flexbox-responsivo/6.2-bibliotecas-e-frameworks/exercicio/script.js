@@ -105,10 +105,26 @@ function validations(e) {
     .addField('#textarea', [
       {
         validator: (value) => {
+          return value.length < 1001;
+        },
+        errorMessage: 'Descrição muito grande'
+      },
+      {
+        validator: (value) => {
           return value !== undefined && value.length > 9;
         },
         errorMessage: 'Sua descrição não pode ser menor que 10 letras',
       },
+    ])
+    .addField('#cargo',[
+      {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório'
+      },
+      {
+        rule: 'maxLength',
+        value: 40
+      }
     ])
    .onSuccess((ev)=>{
       ev.preventDefault();
