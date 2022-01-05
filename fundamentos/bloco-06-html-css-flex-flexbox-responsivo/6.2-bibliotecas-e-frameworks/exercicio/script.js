@@ -1,23 +1,31 @@
 const validation = new JustValidate('#form', {
   errorFieldCssClass: 'is-invalid',
-  errorLabelStyle: {
-    fontSize: '14px',
-    color: '#dc3545',
-  },
+    errorFieldStyle: {
+      border: '1px solid #DC3545',
+    },
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: '#DC3545',
+      fontSize: '13px',
+      textDecoration: 'underlined',
+    },
+    
   focusInvalidField: true,
   lockForm: true,
-  tooltip: {
-    position: 'top',
-  },
 });
 
 function passou() {
   console.log('PASSOU');
 }
-// console.log(validate)
+
 function validations(e) {
   validation
     .addField('#name', [
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Nome muito curto'
+      },
       {
         rule: 'maxLength',
         value: 40,
@@ -40,6 +48,25 @@ function validations(e) {
         rule: 'maxLength',
         value: 50
       }
+    ])
+    .addField('#cpf', [
+      {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+      },
+      {
+        rule: 'number',
+        errorMessage: 'Preencha somente com números'
+      },
+      {
+        rule: 'maxLength',
+        value: 11
+      },
+      {
+        rule: 'minLength',
+        value: 11,
+        errorMessage: 'muito curto'
+      },
     ])
 
   //  .onSuccess((ev)=>{
