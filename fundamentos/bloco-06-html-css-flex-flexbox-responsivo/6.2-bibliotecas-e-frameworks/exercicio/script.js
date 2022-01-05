@@ -1,24 +1,50 @@
-import JustValidate from 'just-validate';
+const validation = new JustValidate('#form', {
+  errorFieldCssClass: 'is-invalid',
+  errorLabelStyle: {
+    fontSize: '14px',
+    color: '#dc3545',
+  },
+  focusInvalidField: true,
+  lockForm: true,
+  tooltip: {
+    position: 'top',
+  },
+});
 
-const validate = new JustValidate('#form');
+function passou() {
+  console.log('PASSOU');
+}
+// console.log(validate)
+function validations(e) {
+  validation
+    .addField('#name', [
+      {
+        rule: 'minLength',
+        value: 3,
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+    ])
+    .addField('#email', [
+      {
+        rule: 'required',
+        errorMessage: 'Coloca teu email ai camarada',
+      },
+    ]);
 
-validate.addField('#name', [
-  {
-    rule: 'minLength',
-    value: 10,
-  },
-  {
-    rule: 'maxLength',
-    value: 30,
-  },
-  {
-    rule: 'required',
-    errorMessage: 'ADSON REIS BOLADO',
-  },
-]);
+  //  .onSuccess((ev)=>{
+  //     ev.preventDefault();
+  //     passou();
+  // }
+  // );
+}
+
+const btn_enviar = document.querySelector('#submit');
+btn_enviar.addEventListener('click', validations);
 
 const inputs = {};
-
 function salvaInputs() {
   const todosInputs = document.querySelectorAll('input[type=text]');
   for (key of todosInputs) {
@@ -77,8 +103,7 @@ function states() {
   }
 }
 
-window.onload = () => {
-  states();
+function pickday() {
   document.querySelector('#data-inicio').DatePickerX.init({
     format: 'dd/M/yyyy',
     shortMonthLabels: [
@@ -96,9 +121,8 @@ window.onload = () => {
       'Dez',
     ],
   });
-  const btn_enviar = document.querySelector('#submit');
-  btn_enviar.addEventListener('click', (event) => {
-    event.preventDefault()
-  })
-  const limpar = document.querySelector('#limpar');
+}
+window.onload = () => {
+  states();
+  pickday();
 };
