@@ -105,15 +105,15 @@ function validations(e) {
     .addField('#textarea', [
       {
         validator: (value) => {
-          return value.length < 1001;
-        },
-        errorMessage: 'Descrição muito grande'
-      },
-      {
-        validator: (value) => {
           return value !== undefined && value.length > 9;
         },
         errorMessage: 'Sua descrição não pode ser menor que 10 letras',
+      },
+      {
+        validator: (value) => {
+          return value < 1001
+        },
+        errorMessage: 'Descrição muito grande'
       },
     ])
     .addField('#cargo',[
@@ -125,6 +125,18 @@ function validations(e) {
         rule: 'maxLength',
         value: 40
       }
+    ])
+    .addField('#data-inicio', [
+      {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório'
+      },
+      {
+        plugin: JustValidatePluginDate(() => ({
+          format: 'dd/MM/yyyy',
+        })),
+        errorMessage: 'Formato da data errada',
+      },
     ])
    .onSuccess((ev)=>{
       ev.preventDefault();
@@ -197,7 +209,7 @@ function states() {
 
 function pickday() {
   document.querySelector('#data-inicio').DatePickerX.init({
-    format: 'dd/M/yyyy',
+    format: 'dd/mm/yyyy',
     shortMonthLabels: [
       'Jan',
       'Fev',
