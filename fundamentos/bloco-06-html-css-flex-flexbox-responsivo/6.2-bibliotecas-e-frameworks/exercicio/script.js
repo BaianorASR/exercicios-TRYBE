@@ -19,20 +19,28 @@ function validations(e) {
   validation
     .addField('#name', [
       {
-        rule: 'minLength',
-        value: 3,
+        rule: 'maxLength',
+        value: 40,
       },
       {
-        rule: 'maxLength',
-        value: 30,
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
       },
     ])
     .addField('#email', [
       {
         rule: 'required',
-        errorMessage: 'Coloca teu email ai camarada',
+        errorMessage: 'Este campo é obrigatório',
       },
-    ]);
+      {
+        rule: 'email',
+        errorMessage:'Email invalido'
+      },
+      {
+        rule: 'maxLength',
+        value: 50
+      }
+    ])
 
   //  .onSuccess((ev)=>{
   //     ev.preventDefault();
