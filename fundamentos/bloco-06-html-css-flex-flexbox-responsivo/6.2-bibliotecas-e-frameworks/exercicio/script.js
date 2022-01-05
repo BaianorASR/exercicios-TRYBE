@@ -102,7 +102,14 @@ function validations(e) {
       '#radio-group',
       'Selecione uma das opções'
     )
-
+    .addField('#textarea', [
+      {
+        validator: (value) => {
+          return value !== undefined && value.length > 9;
+        },
+        errorMessage: 'Sua descrição não pode ser menor que 10 letras',
+      },
+    ])
    .onSuccess((ev)=>{
       ev.preventDefault();
       passou();
