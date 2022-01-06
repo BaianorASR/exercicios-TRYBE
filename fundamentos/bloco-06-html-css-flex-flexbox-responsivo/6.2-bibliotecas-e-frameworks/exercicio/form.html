@@ -20,18 +20,17 @@
         <h1 class="display-3 text-center p-2">Formulario</h1>
       </header>
     </div>
-    
-    <div class="container">
+
+    <div class="container border border-2 p-3" id="oi">
       <form action="" id="form" autocomplete="off">
         <div class="container">
-          <p class="lead">Dados:</p>
-          <label class="form-label" for="nome">Nome</label>
+          <label class="col-form-label" for="nome">Nome</label>
           <input class="form-control" type="text" id="name" name="name" autocomplete="off" />
         </div>
 
         <div class="container">
           <label class="form-label" for="email">Email</label>
-          <input class="form-control" type="text" id="email" />
+          <input class="form-control" type="text" id="email" name="email" />
         </div>
 
         <div class="container">
@@ -75,31 +74,45 @@
         </div>
 
         <div class="container">
-          <p class="lead">Emprego:</p>
-
-          <div class="row">
-            <div class="col-auto">
+          <div class="row inline">
+            <div class="col">
               <label class="form-label" for="cargo">Cargo</label>
               <input class="form-control" type="text" name="cargo" id="cargo" />
             </div>
 
-            <div class="col">
-              <label class="form-label" for="data_inicio">Data de inicio</label>
-              <input class="form-control" type="text" name="data" id="data-inicio" />
+            <div class="w-25 col-sm-auto">
+              <label class="form-label" for="data_inicio">Inicio</label>
+              <input class="form-control" type="text" name="data" id="data-inicio" placeholder="dd/mm/aa" />
             </div>
           </div>
 
           <div class="form-floating mt-3">
             <textarea class="form-control" placeholder="descrição" name="sobre" id="textarea"></textarea>
-            <label class="font-monospace text-secondary" for="textarea">Descreva um pouco seu ultimo emprego</label>
+            <label class="fw-light text-muted" for="textarea">Descreva um pouco seu ultimo emprego</label>
           </div>
         </div>
 
-        <div class="container p-2 text-center">
+        <div class="p-2 text-center">
           <button class="btn btn-success text-uppercase" type="submit" id="submit">Enviar</button>
-          <button class="btn btn-danger text-uppercase" id="limpar">Limpar</button>
+          <button class="btn btn-danger text-uppercase" type="reset" id="limpar">Limpar</button>
         </div>
       </form>
+    </div>
+    <div class="modal" tabindex="-1" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Obrigado por preencher o formulário</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="inputModal">
+            <p class="fw-bold text-center">Dados</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

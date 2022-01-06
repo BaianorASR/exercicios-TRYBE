@@ -1,7 +1,21 @@
+function renderResult() {
+  const inputModal = document.querySelector('#inputModal');
+  for (key in inputs) {
+    const p = document.createElement('p');
+    const span = document.createElement('strong');
+    p.innerHTML = `<strong>${key}: </strong>${inputs[key].value}`
+    inputModal.appendChild(p);
+  }
+}
+
 function passedValidation() {
   console.log('PASSOU');
   saveInputs();
+  renderResult()
+  var myModal = new bootstrap.Modal(document.getElementById('myModal'))
+  myModal.show()
 }
+
 
 const validation = new JustValidate('#form', {
   errorFieldCssClass: 'is-invalid',
@@ -14,7 +28,7 @@ const validation = new JustValidate('#form', {
     fontSize: '13px',
     textDecoration: 'underlined',
   },
-
+  
   focusInvalidField: true,
   lockForm: true,
 });
@@ -43,7 +57,7 @@ function validations(e) {
       },
       {
         rule: 'email',
-        errorMessage: 'Email invalido',
+        errorMessage: 'O Email ta errado seu comedia',
       },
       {
         rule: 'maxLength',
@@ -106,12 +120,6 @@ function validations(e) {
           return value !== undefined && value.length > 9;
         },
         errorMessage: 'Sua descrição não pode ser menor que 10 letras',
-      },
-      {
-        validator: (value) => {
-          return value < 1001;
-        },
-        errorMessage: 'Descrição muito grande',
       },
     ])
     .addField('#cargo', [
