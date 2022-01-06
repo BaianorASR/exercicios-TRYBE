@@ -16,7 +16,6 @@ function passedValidation() {
   myModal.show()
 }
 
-
 const validation = new JustValidate('#form', {
   errorFieldCssClass: 'is-invalid',
   errorFieldStyle: {
