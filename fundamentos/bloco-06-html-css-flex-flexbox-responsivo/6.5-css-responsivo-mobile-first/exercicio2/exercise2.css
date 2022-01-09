@@ -30,7 +30,7 @@ nav ul {
   /* border: 2px solid white; */
   display: flex;
   justify-content: center;
-  gap: 20%
+  gap: 20%;
 }
 
 li {
@@ -66,7 +66,6 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-
   .main-content {
     margin: 20px;
     display: flex;
@@ -76,5 +75,18 @@ footer {
   footer {
     font-size: 12px;
   }
+}
 
+@media screen and (min-width: 1200px) {
+  .container-aside {
+    justify-content: space-around;
+  }
+
+  picture {
+    display: block;
+  }
+
+  img {
+    width: 500px;
+  }
 }
