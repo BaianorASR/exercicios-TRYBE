@@ -49,3 +49,16 @@ footer {
   padding: 10px;
 }
 
+@media screen and (min-width: 600px) {
+  .container-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 20px;
+  }
+
+  .container-aside {
+    display: flex;
+    justify-content: center;
+  }
+}
+
