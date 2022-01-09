@@ -37,6 +37,10 @@ li {
   list-style: none;
 }
 
+picture {
+  display: none;
+}
+
 .main-content {
   padding: 10px;
 }
@@ -58,7 +62,19 @@ footer {
 
   .container-aside {
     display: flex;
-    justify-content: center;
   }
 }
 
+@media screen and (min-width: 768px) {
+
+  .main-content {
+    margin: 20px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+}
