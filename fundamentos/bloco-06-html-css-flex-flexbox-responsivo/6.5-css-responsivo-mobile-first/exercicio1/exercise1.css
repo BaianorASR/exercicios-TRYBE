@@ -18,7 +18,7 @@ body {
 }
 
 article {
-  font-size: 20px;
+  font-size: 1em;
 }
 
 h1 {
@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 img {
@@ -58,7 +58,7 @@ figcaption {
     margin: 30px;
   }
   article {
-    font-size: 1.6rem;
+    font-size: 1.1em;
   }
 
   section {
@@ -67,5 +67,18 @@ figcaption {
 
   figure {
     flex: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  body {
+    background-color: lightgrey;
+    max-width: 80%;
+    margin: auto;
+  }
+  
+
+  figure {
+    flex: 30%
   }
 }
