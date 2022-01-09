@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-  font-size: medium;
+  font-size: 1.4rem;
 }
 
 img {
@@ -38,7 +38,6 @@ main {
 }
 
 section {
-  border: 2px solid red;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -50,5 +49,23 @@ figure {
 
 figcaption {
   font-size: 0.8em;
+  text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  body {
+    background-color: lightblue;
+    margin: 30px;
+  }
+  article {
+    font-size: 1.6rem;
+  }
+
+  section {
+    flex-flow: row wrap;
+  }
+
+  figure {
+    flex: 50%;
+  }
+}
