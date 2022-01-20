@@ -1,4 +1,4 @@
-const books = [
+export const books = [
   {
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
@@ -61,4 +61,3 @@ const books = [
   },
 ];
 
-export default books;
