@@ -60,4 +60,3 @@ export const books = [
     releaseYear: 1928,
   },
 ];
-
