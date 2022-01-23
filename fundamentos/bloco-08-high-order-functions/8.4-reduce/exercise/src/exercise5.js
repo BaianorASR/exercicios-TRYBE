@@ -6,9 +6,7 @@ const names = [
 
 // & 5 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
 
-const containsA = () => names.join('')
-.toLowerCase()
-.split('').
-reduce((acc, letter) => letter === 'a' ? acc += 1: acc, 0)
-
+const containsA = () => names.join('').toLowerCase().split('').reduce((acc, letter) => letter === 'a' ? acc += 1: acc, 0)
 export { containsA }
+
+console.log(names.join('').split('').reduce((acc, letter) => letter.toUpperCase() === 'A' ? acc += 1: acc, 0))
