@@ -13,5 +13,4 @@ const studentAverage = () => students.map((item, index) => ({
   average: grades[index].reduce((acc, e) => acc + e) / grades[index].length
 }))
 
-console.log(studentAverage())
 export { studentAverage };

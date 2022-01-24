@@ -8,5 +8,3 @@ const names = [
 
 const containsA = () => names.join('').toLowerCase().split('').reduce((acc, letter) => letter === 'a' ? acc += 1: acc, 0)
 export { containsA }
-
-console.log(names.join('').split('').reduce((acc, letter) => letter.toUpperCase() === 'A' ? acc += 1: acc, 0))

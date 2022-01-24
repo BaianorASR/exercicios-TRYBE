@@ -4,5 +4,4 @@ import { books } from './books.js';
 
 const averageAge = () => books.reduce((acc, e) => acc + (e.releaseYear - e.author.birthYear), 0) / books.length;
 
-console.log(averageAge());
 export { averageAge }

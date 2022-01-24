@@ -1,9 +1,10 @@
-import { studentAverage } from '../test/exercise6.test';
+import { studentAverage } from '../src/exercise6.js'
 
 it('array no com obj no formato { name: nome do aluno, average: media das notas }', () => {
-  expect(studentAverage()).toEqual(
+  expect(studentAverage()).toEqual([
     { name: 'Pedro Henrique', average: 7.8 },
     { name: 'Miguel', average: 9.2 },
     { name: 'Maria Clara', average: 8.8 },
+  ]
   )
 })

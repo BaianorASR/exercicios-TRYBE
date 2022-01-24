@@ -5,5 +5,4 @@ function longestNamedBook() {
     return e.name.length > acc.name.length ? e : acc
   })
 }
-console.log(longestNamedBook())
 export { longestNamedBook }
