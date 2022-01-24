@@ -1,17 +1,9 @@
-const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
-const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
+import { studentAverage } from '../test/exercise6.test';
 
-// const studentAverage = () => {
-//   return students.map((item, index) => ({
-//     nome: item,
-//     average: grades[index].reduce((acc, e, i, arr) => acc + (e / arr.length),0)
-//   }))
-// }
-
-const studentAverage = () => students.map((item, index) => ({
-  name: item,
-  average: grades[index].reduce((acc, e) => acc + e) / grades[index].length
-}))
-
-console.log(studentAverage())
-export { studentAverage };
+it('array no com obj no formato { name: nome do aluno, average: media das notas }', () => {
+  expect(studentAverage()).toEqual(
+    { name: 'Pedro Henrique', average: 7.8 },
+    { name: 'Miguel', average: 9.2 },
+    { name: 'Maria Clara', average: 8.8 },
+  )
+})
