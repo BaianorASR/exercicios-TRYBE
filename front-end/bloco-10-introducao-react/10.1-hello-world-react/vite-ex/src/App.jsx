@@ -3,29 +3,15 @@ import logo from './logo.svg'
 import './App.css'
 import Header from './Header'
 import Content from './Content'
-import Footer from './Footere'
-// const Task = (value) => {
-//   return (
-//     <li>{value}</li>
-//   );
-// }
-
-// const arr = [
-//   'esdutar',
-//   'aprender',
-//   'trabalhar'
-// ]
+import Footer from './Footer'
 
 function App() {
 return (
-  <div>
+  <div className='App'>
     <Header/>
+    <div  className='Container'>
     <Content/>
-    {/* <section>
-      <ol>
-        {arr.map(task => Task(task))}
-      </ol>
-    </section> */}
+    </div>
     <Footer/>
   </div>
 )

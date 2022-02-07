@@ -26,10 +26,10 @@ const conteudos = [
 const Content = () =>
   conteudos.map(({ conteudo, bloco, status }, index) => {
     return (
-      <p key={index}>
-        O conteudo é: {conteudo}<br />
-        Status: {status}<br />
-        Bloco: {bloco}
+      <p key={index} className='Content'>
+        <span>O conteudo é: {conteudo}</span><br />
+        <span>Status: {status}</span><br />
+        <span>Bloco: {bloco}</span>
       </p>
     );
   });
