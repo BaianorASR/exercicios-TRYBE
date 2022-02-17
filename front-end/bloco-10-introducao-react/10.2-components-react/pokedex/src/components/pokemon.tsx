@@ -6,9 +6,9 @@ class Pokemons extends React.Component {
     return (
       <section className='card'>
           <div >
-            <p>{this.props.obj.name}</p>
-            <p>{this.props.obj.type}</p>
-            <p>average: {this.props.obj.averageWeight.value}{this.props.obj.averageWeight.measurementUnit}</p>
+            <p>Name: {this.props.obj.name}</p>
+            <p>Type: {this.props.obj.type}</p>
+            <p>Average: {this.props.obj.averageWeight.value}{this.props.obj.averageWeight.measurementUnit}</p>
           </div>
           <div>
             <img src={this.props.obj.image} />
