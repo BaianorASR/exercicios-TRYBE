@@ -1,17 +1,20 @@
 import React from 'react';
 import '../style/pokemon.css'
+import { MyProps } from './pokedex';
 
-class Pokemons extends React.Component {
+
+class Pokemons extends React.Component<MyProps> {
+
   render() {
     return (
       <section className='card'>
           <div >
-            <p>Name: {this.props.obj.name}</p>
-            <p>Type: {this.props.obj.type}</p>
-            <p>Average: {this.props.obj.averageWeight.value}{this.props.obj.averageWeight.measurementUnit}</p>
+            <p>Name: {this.props.pokemonsList.name}</p>
+            <p>Type: {this.props.pokemonsList.type}</p>
+            <p>Average: {this.props.pokemonsList.averageWeight.value}{this.props.pokemonsList.averageWeight.measurementUnit}</p>
           </div>
           <div>
-            <img src={this.props.obj.image} />
+            <img src={this.props.pokemonsList.image} />
           </div>
      </section>
     )
