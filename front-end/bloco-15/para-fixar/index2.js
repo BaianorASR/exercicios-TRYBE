@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 
 import meuOutroReducer from './meuOutroReducer';
 import meuReducer from './meuReducer';
+import reducerCombinado from './reducers';
 
 const reducerCombinado = combineReducers({
   meuReducer,
