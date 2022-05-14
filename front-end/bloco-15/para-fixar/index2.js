@@ -6,7 +6,7 @@ import meuOutroReducer from './meuOutroReducer';
 import meuReducer from './meuReducer';
 import reducerCombinado from './reducers';
 
-const reducerCombinado = combineReducers({
+const reducerCombinado = combineReducers({s
   meuReducer,
   meuOutroReducer,
 });
